@@ -1,5 +1,5 @@
 ansible_network_os: cisco.ios.ios
-ansible_connection: network_cli
+connection: network_cli
 ansible_become_method: enable
 ansible_become: true
 ansible_host_key_checking: false
