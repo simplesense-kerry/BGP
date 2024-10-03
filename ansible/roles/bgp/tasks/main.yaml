@@ -1,0 +1,15 @@
+- name: Add BGP Configs
+  cisco.ios.ios_config:
+    lines:
+      - router bgp 100
+      - bgp log-neighbor-changes
+      - bgp listen range 192.168.2.0/24 peer-group otg
+      - bgp listen limit 200
+      - neighbor otg peer-group
+      - neighbor otg remote-as 100
+      - address-family ipv4
+      - network 100.80.4.0 mask 255.255.255.252
+      - neighbor otg activate
+    save_when: changed
+  tags: 
+    - bgp
