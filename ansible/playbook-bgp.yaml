@@ -1,5 +1,5 @@
 - name: Playbook Cisco IOS router bgp
-  hosts: 8000v
+  hosts: all
   # prevent gathering facts until we import users and auth
   gather_facts: false
 
