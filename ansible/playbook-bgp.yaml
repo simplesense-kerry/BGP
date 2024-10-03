@@ -1,0 +1,7 @@
+- name: Playbook Cisco IOS router bgp
+  hosts: router
+  # prevent gathering facts until we import users and auth
+  gather_facts: false
+
+  roles:
+    - bgp
