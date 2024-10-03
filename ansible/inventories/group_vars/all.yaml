@@ -1,0 +1,16 @@
+ansible_network_os: cisco.ios.ios
+ansible_connection: network_cli
+ansible_become_method: enable
+ansible_become: true
+ansible_host_key_checking: false
+ansible_ssh_common_args: -o StrictHostKeyChecking=no
+ansible_ssh_extra_args: -o StrictHostKeyChecking=no
+ansible_network_cli_ssh_type: paramiko
+aws_region: '{{ SI_ENV.aws.region }}'
+stack_name: '{{ SI_ENV.aws.cloudformation.stackName }}'
+stack_name_suffix: '{{ SI_ENV.aws.cloudformation.stackNameSuffix }}'
+
+ansible_password: 1234
+ansible_become_password: 1234
+
+mgmt_ip: 10.101.123.249
